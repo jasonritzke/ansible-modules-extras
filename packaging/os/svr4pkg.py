@@ -227,7 +227,7 @@ def main():
 
     # Only return failed=False when the returncode is known to be good as there may be more
     # undocumented failure return codes
-    if rc not in (0, 2, 10, 20):
+    if rc not in (None, 0, 2, 10, 20):
         result['failed'] = True
     else:
         result['failed'] = False
